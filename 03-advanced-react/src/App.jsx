@@ -1,9 +1,11 @@
-import Starter from "./tutorial/03-conditional-rendering/starter/03-hooks-rule";
+import Starter from "./tutorial/03-conditional-rendering/starter/06-toggle-challenge";
+import Final from "./tutorial/02-useEffect/final/05-cleanup-function";
 
 function App() {
   return (
     <div className="container">
-      <Starter />
+      {/* <Starter /> */}
+      <Final />
     </div>
   );
 }
