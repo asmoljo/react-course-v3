@@ -1,4 +1,11 @@
-import { CLEAR_CART, REMOVE, INCREASE, DECREASE } from './actions';
+import {
+  CLEAR_CART,
+  REMOVE,
+  INCREASE,
+  DECREASE,
+  LOADING,
+  DISPLAY_ITEMS,
+} from './actions';
 
 const reducer = (state, action) => {
   if (action.type === CLEAR_CART) {
@@ -32,6 +39,13 @@ const reducer = (state, action) => {
     const newItem = { ...item, amount: item.amount - 1 };
     newCart.set(itemId, newItem);
     return { ...state, cart: newCart };
+  }
+  if (action.type === LOADING) {
+    return { ...state, loading: true };
+  }
+  if (action.type === DISPLAY_ITEMS) {
+    const newCart = new Map(action.payload.cart.map((item) => [item.id, item]));
+    return { ...state, loading: false, cart: newCart };
   }
   throw new Error(`no matching action type: ${action.type}`);
 };
