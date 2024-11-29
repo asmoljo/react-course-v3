@@ -1,0 +1,19 @@
+multiple select same string ODJEDNOM      ->                     CTRL+SHIFT+L
+multiple select same string JEDAN PO JEDAN STRING      ->        CTRL+D
+
+Delete the current line:      ->    Ctrl + Shift+ K.
+Select current line:    ->          Ctrl + L.
+Select current word:   ->           Ctrl + D.
+
+multiple cursors            -> ALT+click na poziciju gdje zelim kursor
+How to automatically write html structure(html header)      ->             !+ENTER
+idi na kraj linije  				  ->       END
+obrisi trenutnu liniju 			  ->       SHIFT + DEL
+kreiraj novu praznu liniju ispod trenutnog reda i prebaci kursor u nju      ->   CTRL + Enter
+kopiraj trenutnu liniju u red ispod 	 ->        SHIFT+ALT+DOWN ARROW
+pomici trenutni red gore/dolje   		  ->         ALT + UP/DOWN ARROW
+block comment        ->             Shift + Alt + A   
+comment/uncomment multiple lines single blocked line by line    ->        CTRL + K + C (comment)  CTRL + K + U (uncomment)   ili CTRL + /
+
+Emmet:
+brzo kreiranje komponenti    ->  rafce
