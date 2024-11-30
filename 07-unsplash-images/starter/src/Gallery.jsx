@@ -1,14 +1,17 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { useGlobalContext } from './context';
 
 const url =
-  'https://api.unsplash.com/search/photos?client_id=ijSlor7QoC7r3urJDkJRowgA6qKSMCuOfafjmHYRLPM&query=shark';
+  'https://api.unsplash.com/search/photos?client_id=ijSlor7QoC7r3urJDkJRowgA6qKSMCuOfafjmHYRLPM';
 
 const Gallery = () => {
+  const { searchTerm } = useGlobalContext();
   const response = useQuery({
-    queryKey: ['images'],
+    // u queryKey se kao drugi parametar dodaje 'searchTerm', jer inace ReacTquery vraca iz cash-a stanje, a ovako sa drugim parametrom ide novi upit
+    queryKey: ['images', searchTerm],
     queryFn: async () => {
-      const result = await axios.get(url);
+      const result = await axios.get(`${url}&query=${searchTerm}`);
       return result.data;
     },
   });
